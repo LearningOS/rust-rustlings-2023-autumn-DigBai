@@ -8,15 +8,15 @@
 // Execute `rustlings hint functions4` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+
 
 fn main() {
     let original_price = 51;
     println!("Your sale price is {}", sale_price(original_price));
 }
 
-fn sale_price(price: i32) -> {
-    if is_even(price) {
+fn sale_price(price: i32) -> i32{//->后面加上函数的返回类型
+    if is_even(price) {//is_even函数判断是否为偶数
         price - 10
     } else {
         price - 3

@@ -2,23 +2,23 @@
 //
 // Execute `rustlings hint if3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 pub fn animal_habitat(animal: &str) -> &'static str {
     let identifier = if animal == "crab" {
+        //let identifier = if animal == "crab" 如果 animal 的值等于 "crab"，则将 1.0 赋给变量 identifier
         1
     } else if animal == "gopher" {
-        2.0
+        2
     } else if animal == "snake" {
         3
     } else {
-        "Unknown"
+        0
     };
 
-    // DO NOT CHANGE THIS STATEMENT BELOW
-    let habitat = if identifier == 1 {
+    // DO NOT CHANGE THIS STATEMENT BELOW、
+    //if语句的值返回给habitat
+    let habitat = if identifier == 1 {//上面的判断中identifier可能是1,2.0,3，unknow因为只有一个可能所以不会出现类型不一致
         "Beach"
-    } else if identifier == 2 {
+    } else if identifier == 2 {//但是identifier等于2.0会与2冲突
         "Burrow"
     } else if identifier == 3 {
         "Desert"
@@ -26,7 +26,7 @@ pub fn animal_habitat(animal: &str) -> &'static str {
         "Unknown"
     };
 
-    habitat
+    habitat//隐士返回最后一个表达式的值
 }
 
 #[cfg(test)]

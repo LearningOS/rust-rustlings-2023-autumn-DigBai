@@ -7,14 +7,14 @@
 // Execute `rustlings hint move_semantics2` or use the `hint` watch subcommand
 // for a hint.
 
-// I AM NOT DONE
-
 fn main() {
     let vec0 = Vec::new();
-
-    let mut vec1 = fill_vec(vec0);
+   //在 Rust 中，一旦将值移动给另一个变量或函数后，原始的变量将不能再使用，除非通过引用方式借用。
+   //let mut vec1 = fill_vec(vec0);这样就把vec0的值移动给函数了  所以改成不vec0的clone移动给他
+    let mut vec1 = fill_vec(vec0.clone());
 
     println!("{} has length {}, with contents: `{:?}`", "vec0", vec0.len(), vec0);
+ 
 
     vec1.push(88);
 

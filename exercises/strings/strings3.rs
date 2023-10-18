@@ -3,21 +3,24 @@
 // Execute `rustlings hint strings3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+
 
 fn trim_me(input: &str) -> String {
     // TODO: Remove whitespace from both ends of a string!
-    ???
+    let trimmed = input.trim();
+    trimmed.to_string()//在Rust中，trim方法返回一个新的字符串，表示已经去除两端空白字符的原始字符串。这不会修改原始字符串
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There's multiple ways to do this!
-    ???
+    let composed = format!("{} world!", input);
+    composed
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons"!
-    ???
+    let replaced = input.replace("cars", "balloons");
+    replaced
 }
 
 #[cfg(test)]
